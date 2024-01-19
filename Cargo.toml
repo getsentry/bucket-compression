@@ -2,6 +2,7 @@
 name = "bucket-compression"
 version = "0.1.0"
 edition = "2021"
+autobenches = false
 
 [profile.release]
 debug = true
@@ -31,3 +32,10 @@ zstd = "0.13.0"
 fpzip-sys = "0.1.8"
 tsz = "0.1.4"
 zfp-sys = "0.1.14"
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["html_reports"] }
+
+[[bench]]
+name = "perf"
+harness = false

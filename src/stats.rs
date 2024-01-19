@@ -88,6 +88,20 @@ impl Test {
             validate,
         }
     }
+
+    pub fn name(&self) -> &'static str {
+        self.name
+    }
+
+    #[inline]
+    pub fn write(&mut self, v: &[f64]) -> Result<Vec<u8>> {
+        (self.write)(v)
+    }
+
+    #[inline]
+    pub fn read(&mut self, v: &[u8]) -> Result<Vec<f64>> {
+        (self.read)(v)
+    }
 }
 
 fn as_bytes<T>(v: &[T]) -> &[u8] {
@@ -191,10 +205,10 @@ impl Benchmark {
         for test in &mut self.tests {
             let stats = self.stats.entry(test.name).or_default();
 
-            let mut compressed = (test.write)(&bucket.value)?;
+            let mut compressed = test.write(&bucket.value)?;
 
             if test.validate {
-                let decompressed = (test.read)(&compressed)?;
+                let decompressed = test.read(&compressed)?;
                 assert_eq!(decompressed.len(), bucket.value.len());
 
                 let mut errors = Stats::default();
@@ -230,8 +244,8 @@ fn relative_error(original: &f64, decoded: &f64) -> f64 {
 }
 
 #[derive(Debug, Deserialize)]
-struct MiniBucket {
-    value: Vec<f64>,
+pub struct MiniBucket {
+    pub value: Vec<f64>,
 }
 
 #[derive(Debug, Default)]

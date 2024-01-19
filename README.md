@@ -6,6 +6,15 @@ the `results/` folder.
 
 [Results](results/)
 
+Notes on these results:
+- Performance benchmarks are not yet representative as they allocate
+  intermediary buffers to decode and encode data. For more comparable results,
+  they will have to be refactored to reuse buffers and avoid intermediate
+  allocations. The same strategy should be used in production use.
+- `fpzip` and `zfp` use transpose the machine-specific floating point
+  representation. It is yet to be tested if the binary representation is
+  portable.
+
 ## Algorithms
 
 Lossless algorithms:
@@ -16,12 +25,13 @@ Lossless algorithms:
 - zstd
 - [fpzip] reversible
 - [zfp] reversible
+- tsz: [Gorilla] XOR-based floating point compression. The implementation is
+  currently broken and does not decompress the same numbers.
 
 Lossy algorithms:
 
 - [fpzip]
 - [zfp]
-- tsz: [Gorilla] XOR-based floating point compression
 
 ## Data
 
@@ -51,19 +61,19 @@ compression algorithms. The baseline for this comparison is a JSON string with
 the list of values in the bucket. To stringify and parse this JSON, `serde_json`
 is used in default configuration.
 
-There are two main types of benchmarks:
+There are two main types of benchmarks: compression and performance benchmarks.
 
-1. **Compression ratio:** Measure the effectiveness of the compression
-   algorithms. The ratios (e.g. 23%) are size of the binary output compared with
-   the plain JSON string. Note that ratios larger than 100% are possible if the
-   binary output is larger than the JSON string. This can happen particularly
-   for buckets with a large number of zeros. These benchmarks are run over the
-   full dataset provided.
-2. **Performance:** Measure the throughput of buckets and elements based on a
-   few select examples. The benchmark examples are configured directly in
-   `main.rs`
+### Compression Ratio
 
-The benchmarks can be configured using the `Args` structure in `main.rs`:
+Measures the effectiveness of the compression algorithms. The ratios (e.g. 23%)
+are size of the binary output compared with the plain JSON string. Note that
+ratios larger than 100% are possible if the binary output is larger than the
+JSON string. This can happen particularly for buckets with a large number of
+zeros.
+
+The benchmark runs over the full dataset provided and prints statistics of the
+compression ratios and relative error rates to standard out. It can be
+configured using the `Args` structure in `main.rs`:
 
  - `path`: The path to the file containing JSON-encoded buckets.
  - `sort`: Sorts the values loaded from the file before running compression.
@@ -75,30 +85,33 @@ The benchmarks can be configured using the `Args` structure in `main.rs`:
    the raw binary.
  - `min_values`: Skips all buckets with fewer than the given number of values.
    This allows to configure a cutoff where compression is not worth it. This
-   effectively reduces the number of buckets for the test. This is ignored in
-   the performance benchmark.
- - `baseline`: Use either the JSON representation or the binary buffer (fixed 8-byte per value) as baseline for all compression algorithms.
+   effectively reduces the number of buckets for the test.
+ - `baseline`: Use either the JSON representation or the binary buffer (fixed
+   8-byte per value) as baseline for all compression algorithms.
 
-## Building and Running
-
-Always build in Release mode. By default, debug information is enabled for
-release builds in this workspace.
-
-```
-cargo build --release
-```
-
-To run compression benchmarks, run the binary:
+To run compression benchmarks, run the binary in release mode:
 
 ```
 RUST_BACKTRACE=1 cargo run --release
 ```
+
+Output can be redirected to a file, this is how the files in `results/` have
+been generated.
+
+### Performance
+
+Measures the throughput of buckets and elements based on a few select examples.
+The benchmark runs the same compression algorithms as the compression ratio, but
+it only supports the path and sorting. All other options are ignored.
 
 To run performance benchmarks, use the bench test suite:
 
 ```
 cargo bench
 ```
+
+The test suite is configured to create HTML reports under
+`target/criterion/report/index.html`.
 
 
 [schema]: https://getsentry.github.io/relay/relay_metrics/struct.Bucket.html#json-representation

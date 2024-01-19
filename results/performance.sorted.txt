@@ -1,0 +1,451 @@
+write/json uncompressed/12k / zeros
+                        time:   [72.544 µs 72.685 µs 72.845 µs]
+                        thrpt:  [171.23 Melem/s 171.60 Melem/s 171.94 Melem/s]
+write/json uncompressed/12k / 32bit
+                        time:   [383.16 µs 383.62 µs 384.14 µs]
+                        thrpt:  [32.470 Melem/s 32.514 Melem/s 32.553 Melem/s]
+write/json uncompressed/12k / 64bit
+                        time:   [292.94 µs 293.38 µs 293.88 µs]
+                        thrpt:  [42.438 Melem/s 42.512 Melem/s 42.576 Melem/s]
+write/json uncompressed/430 / 64bit
+                        time:   [10.018 µs 10.076 µs 10.124 µs]
+                        thrpt:  [42.572 Melem/s 42.774 Melem/s 43.021 Melem/s]
+
+write/binary uncompressed/12k / zeros
+                        time:   [8.1786 µs 8.2359 µs 8.3115 µs]
+                        thrpt:  [1.5007 Gelem/s 1.5145 Gelem/s 1.5251 Gelem/s]
+write/binary uncompressed/12k / 32bit
+                        time:   [8.1439 µs 8.1881 µs 8.2357 µs]
+                        thrpt:  [1.5145 Gelem/s 1.5233 Gelem/s 1.5316 Gelem/s]
+write/binary uncompressed/12k / 64bit
+                        time:   [8.0785 µs 8.1084 µs 8.1401 µs]
+                        thrpt:  [1.5322 Gelem/s 1.5382 Gelem/s 1.5438 Gelem/s]
+write/binary uncompressed/430 / 64bit
+                        time:   [297.62 ns 303.85 ns 309.11 ns]
+                        thrpt:  [1.3943 Gelem/s 1.4184 Gelem/s 1.4482 Gelem/s]
+
+write/lz4/12k / zeros   time:   [10.436 µs 10.497 µs 10.565 µs]
+                        thrpt:  [1.1806 Gelem/s 1.1883 Gelem/s 1.1952 Gelem/s]
+write/lz4/12k / 32bit   time:   [64.196 µs 64.289 µs 64.374 µs]
+                        thrpt:  [193.76 Melem/s 194.01 Melem/s 194.30 Melem/s]
+write/lz4/12k / 64bit   time:   [176.01 µs 176.30 µs 176.61 µs]
+                        thrpt:  [70.619 Melem/s 70.744 Melem/s 70.859 Melem/s]
+write/lz4/430 / 64bit   time:   [5.4546 µs 5.4607 µs 5.4679 µs]
+                        thrpt:  [78.823 Melem/s 78.928 Melem/s 79.016 Melem/s]
+
+write/deflate(1)/12k / zeros
+                        time:   [115.06 µs 117.96 µs 120.70 µs]
+                        thrpt:  [103.34 Melem/s 105.74 Melem/s 108.40 Melem/s]
+write/deflate(1)/12k / 32bit
+                        time:   [572.83 µs 575.69 µs 579.26 µs]
+                        thrpt:  [21.533 Melem/s 21.666 Melem/s 21.774 Melem/s]
+write/deflate(1)/12k / 64bit
+                        time:   [483.11 µs 484.41 µs 485.70 µs]
+                        thrpt:  [25.679 Melem/s 25.747 Melem/s 25.816 Melem/s]
+write/deflate(1)/430 / 64bit
+                        time:   [60.198 µs 68.529 µs 78.362 µs]
+                        thrpt:  [5.5001 Melem/s 6.2893 Melem/s 7.1597 Melem/s]
+
+write/deflate(6)/12k / zeros
+                        time:   [195.27 µs 203.55 µs 212.19 µs]
+                        thrpt:  [58.783 Melem/s 61.278 Melem/s 63.874 Melem/s]
+write/deflate(6)/12k / 32bit
+                        time:   [1.9276 ms 1.9323 ms 1.9377 ms]
+                        thrpt:  [6.4371 Melem/s 6.4549 Melem/s 6.4707 Melem/s]
+write/deflate(6)/12k / 64bit
+                        time:   [4.7640 ms 4.7692 ms 4.7761 ms]
+                        thrpt:  [2.6113 Melem/s 2.6151 Melem/s 2.6180 Melem/s]
+write/deflate(6)/430 / 64bit
+                        time:   [194.91 µs 204.59 µs 213.81 µs]
+                        thrpt:  [2.0158 Melem/s 2.1066 Melem/s 2.2113 Melem/s]
+
+write/gzip(1)/12k / zeros
+                        time:   [81.450 µs 92.632 µs 105.03 µs]
+                        thrpt:  [118.76 Melem/s 134.65 Melem/s 153.14 Melem/s]
+write/gzip(1)/12k / 32bit
+                        time:   [601.11 µs 604.24 µs 608.05 µs]
+                        thrpt:  [20.513 Melem/s 20.642 Melem/s 20.750 Melem/s]
+write/gzip(1)/12k / 64bit
+                        time:   [537.46 µs 541.31 µs 546.88 µs]
+                        thrpt:  [22.806 Melem/s 23.041 Melem/s 23.205 Melem/s]
+write/gzip(1)/430 / 64bit
+                        time:   [95.694 µs 102.85 µs 110.31 µs]
+                        thrpt:  [3.9072 Melem/s 4.1906 Melem/s 4.5039 Melem/s]
+
+write/gzip(6)/12k / zeros
+                        time:   [241.93 µs 248.68 µs 255.06 µs]
+                        thrpt:  [48.902 Melem/s 50.156 Melem/s 51.556 Melem/s]
+write/gzip(6)/12k / 32bit
+                        time:   [1.9704 ms 1.9744 ms 1.9789 ms]
+                        thrpt:  [6.3030 Melem/s 6.3174 Melem/s 6.3303 Melem/s]
+write/gzip(6)/12k / 64bit
+                        time:   [4.9483 ms 4.9588 ms 4.9693 ms]
+                        thrpt:  [2.5098 Melem/s 2.5151 Melem/s 2.5204 Melem/s]
+write/gzip(6)/430 / 64bit
+                        time:   [216.95 µs 218.38 µs 219.61 µs]
+                        thrpt:  [1.9626 Melem/s 1.9736 Melem/s 1.9866 Melem/s]
+
+write/zlib(1)/12k / zeros
+                        time:   [135.34 µs 138.59 µs 141.53 µs]
+                        thrpt:  [88.127 Melem/s 89.997 Melem/s 92.161 Melem/s]
+write/zlib(1)/12k / 32bit
+                        time:   [596.37 µs 598.60 µs 601.29 µs]
+                        thrpt:  [20.744 Melem/s 20.837 Melem/s 20.915 Melem/s]
+write/zlib(1)/12k / 64bit
+                        time:   [504.10 µs 505.07 µs 506.11 µs]
+                        thrpt:  [24.643 Melem/s 24.694 Melem/s 24.741 Melem/s]
+write/zlib(1)/430 / 64bit
+                        time:   [90.849 µs 96.554 µs 102.26 µs]
+                        thrpt:  [4.2149 Melem/s 4.4638 Melem/s 4.7441 Melem/s]
+
+write/zlib(6)/12k / zeros
+                        time:   [227.36 µs 234.16 µs 240.67 µs]
+                        thrpt:  [51.827 Melem/s 53.268 Melem/s 54.860 Melem/s]
+write/zlib(6)/12k / 32bit
+                        time:   [2.0351 ms 2.0442 ms 2.0539 ms]
+                        thrpt:  [6.0729 Melem/s 6.1017 Melem/s 6.1289 Melem/s]
+write/zlib(6)/12k / 64bit
+                        time:   [4.8611 ms 4.8730 ms 4.8865 ms]
+                        thrpt:  [2.5523 Melem/s 2.5594 Melem/s 2.5657 Melem/s]
+write/zlib(6)/430 / 64bit
+                        time:   [217.40 µs 221.12 µs 224.75 µs]
+                        thrpt:  [1.9177 Melem/s 1.9491 Melem/s 1.9825 Melem/s]
+
+write/zstd(1)/12k / zeros
+                        time:   [14.382 µs 14.389 µs 14.397 µs]
+                        thrpt:  [866.38 Melem/s 866.82 Melem/s 867.29 Melem/s]
+write/zstd(1)/12k / 32bit
+                        time:   [99.677 µs 100.35 µs 101.12 µs]
+                        thrpt:  [123.35 Melem/s 124.29 Melem/s 125.13 Melem/s]
+write/zstd(1)/12k / 64bit
+                        time:   [107.22 µs 108.00 µs 108.94 µs]
+                        thrpt:  [114.48 Melem/s 115.48 Melem/s 116.33 Melem/s]
+write/zstd(1)/430 / 64bit
+                        time:   [9.2194 µs 9.2367 µs 9.2564 µs]
+                        thrpt:  [46.562 Melem/s 46.662 Melem/s 46.749 Melem/s]
+
+write/zstd(3)/12k / zeros
+                        time:   [65.084 µs 65.283 µs 65.482 µs]
+                        thrpt:  [190.48 Melem/s 191.06 Melem/s 191.64 Melem/s]
+write/zstd(3)/12k / 32bit
+                        time:   [592.50 µs 595.20 µs 598.38 µs]
+                        thrpt:  [20.844 Melem/s 20.956 Melem/s 21.052 Melem/s]
+write/zstd(3)/12k / 64bit
+                        time:   [518.02 µs 519.02 µs 520.03 µs]
+                        thrpt:  [23.983 Melem/s 24.030 Melem/s 24.076 Melem/s]
+write/zstd(3)/430 / 64bit
+                        time:   [59.933 µs 60.304 µs 60.730 µs]
+                        thrpt:  [7.0970 Melem/s 7.1471 Melem/s 7.1914 Melem/s]
+
+write/tsz/12k / zeros   time:   [25.920 µs 25.947 µs 25.975 µs]
+                        thrpt:  [480.19 Melem/s 480.71 Melem/s 481.21 Melem/s]
+write/tsz/12k / 32bit   time:   [534.98 µs 536.20 µs 537.39 µs]
+                        thrpt:  [23.210 Melem/s 23.262 Melem/s 23.315 Melem/s]
+write/tsz/12k / 64bit   time:   [392.52 µs 393.51 µs 394.45 µs]
+                        thrpt:  [31.619 Melem/s 31.694 Melem/s 31.775 Melem/s]
+write/tsz/430 / 64bit   time:   [9.7447 µs 9.7647 µs 9.7867 µs]
+                        thrpt:  [44.039 Melem/s 44.139 Melem/s 44.229 Melem/s]
+
+write/zfp reversible/12k / zeros
+                        time:   [20.548 µs 20.718 µs 20.924 µs]
+                        thrpt:  [596.11 Melem/s 602.04 Melem/s 607.00 Melem/s]
+write/zfp reversible/12k / 32bit
+                        time:   [419.15 µs 419.48 µs 419.78 µs]
+                        thrpt:  [29.713 Melem/s 29.735 Melem/s 29.758 Melem/s]
+write/zfp reversible/12k / 64bit
+                        time:   [364.79 µs 365.26 µs 365.77 µs]
+                        thrpt:  [34.098 Melem/s 34.145 Melem/s 34.190 Melem/s]
+write/zfp reversible/430 / 64bit
+                        time:   [9.3678 µs 9.3788 µs 9.3905 µs]
+                        thrpt:  [45.897 Melem/s 45.955 Melem/s 46.009 Melem/s]
+
+write/zfp 24bit/12k / zeros
+                        time:   [16.672 µs 16.714 µs 16.758 µs]
+                        thrpt:  [744.32 Melem/s 746.26 Melem/s 748.13 Melem/s]
+write/zfp 24bit/12k / 32bit
+                        time:   [272.84 µs 273.07 µs 273.30 µs]
+                        thrpt:  [45.639 Melem/s 45.678 Melem/s 45.716 Melem/s]
+write/zfp 24bit/12k / 64bit
+                        time:   [268.45 µs 268.69 µs 268.93 µs]
+                        thrpt:  [46.377 Melem/s 46.418 Melem/s 46.459 Melem/s]
+write/zfp 24bit/430 / 64bit
+                        time:   [7.3268 µs 7.3334 µs 7.3407 µs]
+                        thrpt:  [58.714 Melem/s 58.772 Melem/s 58.825 Melem/s]
+
+write/zfp 16bit/12k / zeros
+                        time:   [15.341 µs 15.457 µs 15.571 µs]
+                        thrpt:  [801.06 Melem/s 806.92 Melem/s 813.03 Melem/s]
+write/zfp 16bit/12k / 32bit
+                        time:   [202.01 µs 202.11 µs 202.23 µs]
+                        thrpt:  [61.676 Melem/s 61.712 Melem/s 61.745 Melem/s]
+write/zfp 16bit/12k / 64bit
+                        time:   [209.18 µs 209.35 µs 209.54 µs]
+                        thrpt:  [59.520 Melem/s 59.574 Melem/s 59.623 Melem/s]
+write/zfp 16bit/430 / 64bit
+                        time:   [5.9644 µs 5.9805 µs 5.9990 µs]
+                        thrpt:  [71.845 Melem/s 72.067 Melem/s 72.263 Melem/s]
+
+write/fpzip reversible/12k / zeros
+                        time:   [96.541 µs 96.961 µs 97.377 µs]
+                        thrpt:  [128.09 Melem/s 128.64 Melem/s 129.20 Melem/s]
+write/fpzip reversible/12k / 32bit
+                        time:   [717.33 µs 717.78 µs 718.26 µs]
+                        thrpt:  [17.366 Melem/s 17.377 Melem/s 17.388 Melem/s]
+write/fpzip reversible/12k / 64bit
+                        time:   [716.86 µs 718.02 µs 719.32 µs]
+                        thrpt:  [17.339 Melem/s 17.370 Melem/s 17.398 Melem/s]
+write/fpzip reversible/430 / 64bit
+                        time:   [25.536 µs 25.566 µs 25.597 µs]
+                        thrpt:  [16.838 Melem/s 16.858 Melem/s 16.878 Melem/s]
+
+write/fpzip 24bit/12k / zeros
+                        time:   [92.531 µs 92.940 µs 93.323 µs]
+                        thrpt:  [133.65 Melem/s 134.21 Melem/s 134.80 Melem/s]
+write/fpzip 24bit/12k / 32bit
+                        time:   [259.57 µs 260.20 µs 260.91 µs]
+                        thrpt:  [47.806 Melem/s 47.937 Melem/s 48.053 Melem/s]
+write/fpzip 24bit/12k / 64bit
+                        time:   [279.62 µs 282.75 µs 287.85 µs]
+                        thrpt:  [43.328 Melem/s 44.110 Melem/s 44.604 Melem/s]
+write/fpzip 24bit/430 / 64bit
+                        time:   [5.2589 µs 10.444 µs 22.747 µs]
+                        thrpt:  [18.947 Melem/s 41.269 Melem/s 81.957 Melem/s]
+
+write/fpzip 16bit/12k / zeros
+                        time:   [93.274 µs 93.689 µs 94.102 µs]
+                        thrpt:  [132.55 Melem/s 133.13 Melem/s 133.72 Melem/s]
+write/fpzip 16bit/12k / 32bit
+                        time:   [98.175 µs 98.798 µs 99.504 µs]
+                        thrpt:  [125.35 Melem/s 126.25 Melem/s 127.05 Melem/s]
+write/fpzip 16bit/12k / 64bit
+                        time:   [95.887 µs 96.259 µs 96.608 µs]
+                        thrpt:  [129.10 Melem/s 129.57 Melem/s 130.07 Melem/s]
+write/fpzip 16bit/430 / 64bit
+                        time:   [3.9594 µs 3.9896 µs 4.0182 µs]
+                        thrpt:  [107.26 Melem/s 108.03 Melem/s 108.85 Melem/s]
+
+read/json uncompressed/12k / zeros
+                        time:   [108.83 µs 109.61 µs 110.57 µs]
+                        thrpt:  [112.81 Melem/s 113.80 Melem/s 114.61 Melem/s]
+read/json uncompressed/12k / 32bit
+                        time:   [157.01 µs 158.18 µs 159.46 µs]
+                        thrpt:  [78.219 Melem/s 78.852 Melem/s 79.442 Melem/s]
+read/json uncompressed/12k / 64bit
+                        time:   [254.60 µs 255.18 µs 255.71 µs]
+                        thrpt:  [48.775 Melem/s 48.875 Melem/s 48.986 Melem/s]
+read/json uncompressed/430 / 64bit
+                        time:   [8.8069 µs 8.8172 µs 8.8290 µs]
+                        thrpt:  [48.816 Melem/s 48.882 Melem/s 48.939 Melem/s]
+
+read/binary uncompressed/12k / zeros
+                        time:   [8.2249 µs 8.2554 µs 8.2869 µs]
+                        thrpt:  [1.5051 Gelem/s 1.5109 Gelem/s 1.5165 Gelem/s]
+read/binary uncompressed/12k / 32bit
+                        time:   [8.3642 µs 8.4019 µs 8.4363 µs]
+                        thrpt:  [1.4785 Gelem/s 1.4846 Gelem/s 1.4912 Gelem/s]
+read/binary uncompressed/12k / 64bit
+                        time:   [8.1977 µs 8.2497 µs 8.3088 µs]
+                        thrpt:  [1.5011 Gelem/s 1.5118 Gelem/s 1.5214 Gelem/s]
+read/binary uncompressed/430 / 64bit
+                        time:   [298.84 ns 304.08 ns 308.52 ns]
+                        thrpt:  [1.3970 Gelem/s 1.4174 Gelem/s 1.4423 Gelem/s]
+
+read/lz4/12k / zeros    time:   [890.26 ns 984.09 ns 1.0909 µs]
+                        thrpt:  [11.433 Gelem/s 12.675 Gelem/s 14.010 Gelem/s]
+read/lz4/12k / 32bit    time:   [45.219 ns 46.251 ns 47.262 ns]
+                        thrpt:  [263.91 Gelem/s 269.68 Gelem/s 275.84 Gelem/s]
+read/lz4/12k / 64bit    time:   [107.78 ns 109.49 ns 111.57 ns]
+                        thrpt:  [111.78 Gelem/s 113.91 Gelem/s 115.71 Gelem/s]
+read/lz4/430 / 64bit    time:   [63.277 ns 63.556 ns 63.811 ns]
+                        thrpt:  [6.7543 Gelem/s 6.7814 Gelem/s 6.8113 Gelem/s]
+
+read/deflate(1)/12k / zeros
+                        time:   [66.969 µs 67.293 µs 67.693 µs]
+                        thrpt:  [184.26 Melem/s 185.35 Melem/s 186.25 Melem/s]
+read/deflate(1)/12k / 32bit
+                        time:   [346.34 µs 351.64 µs 358.26 µs]
+                        thrpt:  [34.815 Melem/s 35.471 Melem/s 36.014 Melem/s]
+read/deflate(1)/12k / 64bit
+                        time:   [298.21 µs 299.93 µs 301.87 µs]
+                        thrpt:  [41.315 Melem/s 41.583 Melem/s 41.823 Melem/s]
+read/deflate(1)/430 / 64bit
+                        time:   [11.764 µs 11.790 µs 11.822 µs]
+                        thrpt:  [36.457 Melem/s 36.556 Melem/s 36.636 Melem/s]
+
+read/deflate(6)/12k / zeros
+                        time:   [164.76 µs 165.36 µs 166.14 µs]
+                        thrpt:  [75.076 Melem/s 75.429 Melem/s 75.706 Melem/s]
+read/deflate(6)/12k / 32bit
+                        time:   [370.51 µs 372.78 µs 375.77 µs]
+                        thrpt:  [33.193 Melem/s 33.459 Melem/s 33.664 Melem/s]
+read/deflate(6)/12k / 64bit
+                        time:   [288.57 µs 289.83 µs 291.26 µs]
+                        thrpt:  [42.821 Melem/s 43.033 Melem/s 43.220 Melem/s]
+read/deflate(6)/430 / 64bit
+                        time:   [11.483 µs 11.533 µs 11.595 µs]
+                        thrpt:  [37.171 Melem/s 37.372 Melem/s 37.533 Melem/s]
+
+read/gzip(1)/12k / zeros
+                        time:   [96.412 µs 96.879 µs 97.490 µs]
+                        thrpt:  [127.94 Melem/s 128.75 Melem/s 129.37 Melem/s]
+read/gzip(1)/12k / 32bit
+                        time:   [359.05 µs 360.11 µs 361.45 µs]
+                        thrpt:  [34.509 Melem/s 34.636 Melem/s 34.739 Melem/s]
+read/gzip(1)/12k / 64bit
+                        time:   [324.64 µs 326.48 µs 328.77 µs]
+                        thrpt:  [37.935 Melem/s 38.201 Melem/s 38.418 Melem/s]
+read/gzip(1)/430 / 64bit
+                        time:   [12.784 µs 12.862 µs 12.946 µs]
+                        thrpt:  [33.293 Melem/s 33.509 Melem/s 33.714 Melem/s]
+
+read/gzip(6)/12k / zeros
+                        time:   [193.74 µs 194.60 µs 195.61 µs]
+                        thrpt:  [63.765 Melem/s 64.095 Melem/s 64.381 Melem/s]
+read/gzip(6)/12k / 32bit
+                        time:   [394.03 µs 396.49 µs 399.60 µs]
+                        thrpt:  [31.214 Melem/s 31.458 Melem/s 31.655 Melem/s]
+read/gzip(6)/12k / 64bit
+                        time:   [311.24 µs 313.38 µs 315.69 µs]
+                        thrpt:  [39.507 Melem/s 39.798 Melem/s 40.072 Melem/s]
+read/gzip(6)/430 / 64bit
+                        time:   [12.433 µs 12.505 µs 12.581 µs]
+                        thrpt:  [34.258 Melem/s 34.466 Melem/s 34.665 Melem/s]
+
+read/zlib(1)/12k / zeros
+                        time:   [86.472 µs 86.926 µs 87.479 µs]
+                        thrpt:  [142.58 Melem/s 143.49 Melem/s 144.24 Melem/s]
+read/zlib(1)/12k / 32bit
+                        time:   [359.39 µs 361.86 µs 364.70 µs]
+                        thrpt:  [34.201 Melem/s 34.469 Melem/s 34.706 Melem/s]
+read/zlib(1)/12k / 64bit
+                        time:   [315.27 µs 316.91 µs 318.67 µs]
+                        thrpt:  [39.138 Melem/s 39.356 Melem/s 39.560 Melem/s]
+read/zlib(1)/430 / 64bit
+                        time:   [12.509 µs 12.576 µs 12.648 µs]
+                        thrpt:  [34.077 Melem/s 34.272 Melem/s 34.455 Melem/s]
+
+read/zlib(6)/12k / zeros
+                        time:   [184.99 µs 186.33 µs 187.98 µs]
+                        thrpt:  [66.352 Melem/s 66.939 Melem/s 67.425 Melem/s]
+read/zlib(6)/12k / 32bit
+                        time:   [384.89 µs 387.17 µs 389.76 µs]
+                        thrpt:  [32.002 Melem/s 32.216 Melem/s 32.406 Melem/s]
+read/zlib(6)/12k / 64bit
+                        time:   [304.18 µs 306.64 µs 309.16 µs]
+                        thrpt:  [40.342 Melem/s 40.673 Melem/s 41.002 Melem/s]
+read/zlib(6)/430 / 64bit
+                        time:   [12.101 µs 12.151 µs 12.204 µs]
+                        thrpt:  [35.315 Melem/s 35.471 Melem/s 35.617 Melem/s]
+
+read/zstd(1)/12k / zeros
+                        time:   [50.155 µs 50.460 µs 50.804 µs]
+                        thrpt:  [245.51 Melem/s 247.19 Melem/s 248.69 Melem/s]
+read/zstd(1)/12k / 32bit
+                        time:   [109.11 µs 109.72 µs 110.46 µs]
+                        thrpt:  [112.92 Melem/s 113.68 Melem/s 114.32 Melem/s]
+read/zstd(1)/12k / 64bit
+                        time:   [95.408 µs 95.967 µs 96.609 µs]
+                        thrpt:  [129.10 Melem/s 129.96 Melem/s 130.72 Melem/s]
+read/zstd(1)/430 / 64bit
+                        time:   [189.88 µs 190.40 µs 191.03 µs]
+                        thrpt:  [2.2562 Melem/s 2.2637 Melem/s 2.2699 Melem/s]
+
+read/zstd(3)/12k / zeros
+                        time:   [64.711 µs 65.237 µs 65.867 µs]
+                        thrpt:  [189.37 Melem/s 191.19 Melem/s 192.75 Melem/s]
+read/zstd(3)/12k / 32bit
+                        time:   [131.29 µs 132.13 µs 133.09 µs]
+                        thrpt:  [93.716 Melem/s 94.401 Melem/s 95.002 Melem/s]
+read/zstd(3)/12k / 64bit
+                        time:   [175.12 µs 176.55 µs 178.43 µs]
+                        thrpt:  [69.898 Melem/s 70.643 Melem/s 71.218 Melem/s]
+read/zstd(3)/430 / 64bit
+                        time:   [380.78 µs 383.97 µs 386.24 µs]
+                        thrpt:  [1.1159 Melem/s 1.1225 Melem/s 1.1319 Melem/s]
+
+read/tsz/12k / zeros    time:   [33.773 µs 33.845 µs 33.921 µs]
+                        thrpt:  [367.71 Melem/s 368.54 Melem/s 369.32 Melem/s]
+read/tsz/12k / 32bit    time:   [240.28 µs 241.70 µs 243.35 µs]
+                        thrpt:  [51.256 Melem/s 51.605 Melem/s 51.911 Melem/s]
+read/tsz/12k / 64bit    time:   [228.31 µs 229.53 µs 230.98 µs]
+                        thrpt:  [53.996 Melem/s 54.336 Melem/s 54.628 Melem/s]
+read/tsz/430 / 64bit    time:   [7.4347 µs 7.4523 µs 7.4704 µs]
+                        thrpt:  [57.694 Melem/s 57.835 Melem/s 57.972 Melem/s]
+
+read/zfp reversible/12k / zeros
+                        time:   [16.078 µs 16.321 µs 16.538 µs]
+                        thrpt:  [754.21 Melem/s 764.21 Melem/s 775.76 Melem/s]
+read/zfp reversible/12k / 32bit
+                        time:   [842.89 µs 843.61 µs 844.36 µs]
+                        thrpt:  [14.772 Melem/s 14.785 Melem/s 14.798 Melem/s]
+read/zfp reversible/12k / 64bit
+                        time:   [557.95 µs 558.57 µs 559.15 µs]
+                        thrpt:  [22.305 Melem/s 22.329 Melem/s 22.353 Melem/s]
+read/zfp reversible/430 / 64bit
+                        time:   [9.8587 µs 9.8847 µs 9.9126 µs]
+                        thrpt:  [43.480 Melem/s 43.603 Melem/s 43.718 Melem/s]
+
+read/zfp 24bit/12k / zeros
+                        time:   [17.871 µs 18.046 µs 18.217 µs]
+                        thrpt:  [684.69 Melem/s 691.18 Melem/s 697.95 Melem/s]
+read/zfp 24bit/12k / 32bit
+                        time:   [361.44 µs 361.90 µs 362.39 µs]
+                        thrpt:  [34.419 Melem/s 34.466 Melem/s 34.509 Melem/s]
+read/zfp 24bit/12k / 64bit
+                        time:   [369.72 µs 370.21 µs 370.68 µs]
+                        thrpt:  [33.647 Melem/s 33.689 Melem/s 33.734 Melem/s]
+read/zfp 24bit/430 / 64bit
+                        time:   [7.8135 µs 7.8258 µs 7.8403 µs]
+                        thrpt:  [54.972 Melem/s 55.074 Melem/s 55.161 Melem/s]
+
+read/zfp 16bit/12k / zeros
+                        time:   [17.856 µs 17.974 µs 18.086 µs]
+                        thrpt:  [689.64 Melem/s 693.94 Melem/s 698.54 Melem/s]
+read/zfp 16bit/12k / 32bit
+                        time:   [217.53 µs 218.10 µs 218.64 µs]
+                        thrpt:  [57.048 Melem/s 57.190 Melem/s 57.339 Melem/s]
+read/zfp 16bit/12k / 64bit
+                        time:   [229.17 µs 229.51 µs 229.90 µs]
+                        thrpt:  [54.250 Melem/s 54.341 Melem/s 54.423 Melem/s]
+read/zfp 16bit/430 / 64bit
+                        time:   [5.5385 µs 5.5509 µs 5.5642 µs]
+                        thrpt:  [77.460 Melem/s 77.645 Melem/s 77.819 Melem/s]
+
+read/fpzip reversible/12k / zeros
+                        time:   [209.50 µs 209.91 µs 210.33 µs]
+                        thrpt:  [59.303 Melem/s 59.420 Melem/s 59.537 Melem/s]
+read/fpzip reversible/12k / 32bit
+                        time:   [736.78 µs 738.97 µs 741.31 µs]
+                        thrpt:  [16.826 Melem/s 16.879 Melem/s 16.929 Melem/s]
+read/fpzip reversible/12k / 64bit
+                        time:   [772.26 µs 774.01 µs 775.69 µs]
+                        thrpt:  [16.079 Melem/s 16.113 Melem/s 16.150 Melem/s]
+read/fpzip reversible/430 / 64bit
+                        time:   [27.496 µs 27.574 µs 27.657 µs]
+                        thrpt:  [15.584 Melem/s 15.630 Melem/s 15.675 Melem/s]
+
+read/fpzip 24bit/12k / zeros
+                        time:   [206.34 µs 206.88 µs 207.49 µs]
+                        thrpt:  [60.114 Melem/s 60.290 Melem/s 60.449 Melem/s]
+read/fpzip 24bit/12k / 32bit
+                        time:   [341.17 µs 341.59 µs 342.01 µs]
+                        thrpt:  [36.470 Melem/s 36.514 Melem/s 36.559 Melem/s]
+read/fpzip 24bit/12k / 64bit
+                        time:   [343.13 µs 343.55 µs 344.00 µs]
+                        thrpt:  [36.255 Melem/s 36.303 Melem/s 36.348 Melem/s]
+read/fpzip 24bit/430 / 64bit
+                        time:   [12.752 µs 12.775 µs 12.798 µs]
+                        thrpt:  [33.678 Melem/s 33.738 Melem/s 33.800 Melem/s]
+
+read/fpzip 16bit/12k / zeros
+                        time:   [208.19 µs 208.43 µs 208.65 µs]
+                        thrpt:  [59.780 Melem/s 59.843 Melem/s 59.911 Melem/s]
+read/fpzip 16bit/12k / 32bit
+                        time:   [210.71 µs 211.17 µs 211.70 µs]
+                        thrpt:  [58.918 Melem/s 59.067 Melem/s 59.195 Melem/s]
+read/fpzip 16bit/12k / 64bit
+                        time:   [208.04 µs 208.41 µs 208.84 µs]
+                        thrpt:  [59.720 Melem/s 59.845 Melem/s 59.950 Melem/s]
+read/fpzip 16bit/430 / 64bit
+                        time:   [8.5012 µs 8.5504 µs 8.6147 µs]
+                        thrpt:  [50.031 Melem/s 50.407 Melem/s 50.699 Melem/s]
