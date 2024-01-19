@@ -1,0 +1,33 @@
+[package]
+name = "bucket-compression"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+debug = true
+
+[dependencies]
+# Benchmarking
+anyhow = "1.0.79"
+clap = "4.4.18"
+cli-table = "0.4.7"
+float-ord = "0.3.2"
+indicatif = "0.17.7"
+streaming-stats = "0.2.3"
+
+# Encoding
+base64 = "0.21.7"
+serde_json = "1.0.111"
+serde = "1.0.195"
+# TODO: ciborium / minicbor
+# TODO: protobuf
+
+# General compression
+flate2 = "1.0.28"
+lz4 = "1.24.0"
+zstd = "0.13.0"
+
+# FP algos
+fpzip-sys = "0.1.8"
+tsz = "0.1.4"
+zfp-sys = "0.1.14"
