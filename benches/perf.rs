@@ -6,10 +6,10 @@ const PATH: &str = "data/custom.metrics.jsonb";
 
 // Benchmark inputs from the file (name, line index starting at zero)
 const INPUTS: &[(&str, usize)] = &[
-    ("12k / zeros", 1119),
-    ("12k / 32bit", 1032),
-    ("12k / 64bit", 346),
-    ("430 / 64bit", 13),
+    ("12k zeros", 1119),
+    ("12k 32bit", 1032),
+    ("12k 64bit", 346),
+    ("430 64bit", 13),
 ];
 
 fn load_values(json: &str, line: usize) -> Vec<f64> {
@@ -26,9 +26,8 @@ fn load_values(json: &str, line: usize) -> Vec<f64> {
 pub fn criterion_benchmark(c: &mut Criterion) {
     let json = std::fs::read_to_string(PATH).unwrap();
 
+    let mut group = c.benchmark_group("write");
     for mut test in bucket_compression::tests() {
-        let mut group = c.benchmark_group("write");
-
         for (input_name, line_index) in INPUTS {
             let values = load_values(&json, *line_index);
 
@@ -40,10 +39,10 @@ pub fn criterion_benchmark(c: &mut Criterion) {
             );
         }
     }
+    group.finish();
 
+    let mut group = c.benchmark_group("read");
     for mut test in bucket_compression::tests() {
-        let mut group = c.benchmark_group("read");
-
         for (input_name, line_index) in INPUTS {
             let values = load_values(&json, *line_index);
             let compressed = test.write(values.as_slice()).unwrap();
@@ -56,6 +55,7 @@ pub fn criterion_benchmark(c: &mut Criterion) {
             );
         }
     }
+    group.finish();
 }
 
 criterion_group!(benches, criterion_benchmark);
